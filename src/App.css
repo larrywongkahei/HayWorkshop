@@ -29,9 +29,9 @@
 }
 
 .jsonPlanet {
-  height: 25rem;
-  width: 25rem;
-  animation: spin 12s infinite linear;
+  height: 26rem;
+  width: 26rem;
+  animation: spin 11s infinite linear;
 }
 
 .firstLine {
@@ -71,9 +71,9 @@
 }
 
 .hayStorePlanet {
-  height: 18rem;
-  width: 18rem;
-  animation: spin 10s infinite linear;
+  height: 20rem;
+  width: 20rem;
+  animation: spin 8s infinite linear;
 }
 
 .mentorShip {
@@ -88,10 +88,28 @@
 }
 
 .mentorShipPlanet {
-  height: 13rem;
-  width: 13rem;
+  height: 15.8rem;
+  width: 15.8rem;
   animation: spin 6s infinite linear;
 }
+
+.converter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2rem;
+  width: 2rem;
+  border-radius: 100%;
+  background-color: #78C1F3;
+  cursor: pointer;
+}
+
+.converterPlanet {
+  height: 11rem;
+  width: 11rem;
+  animation: spin 5s infinite linear;
+}
+
 
 .planetSystem {
   display: flex;
@@ -118,6 +136,18 @@
   flex-direction: row;
   justify-content: space-evenly;
 }
+
+.introduction p{
+  cursor: pointer;
+}
+
+.converterIntroduction {
+  background-color: #78C1F3 ;
+  padding: 1rem;
+  color: white;
+  border-radius: 30px;
+}
+
 
 .jsonMakerIntroduction {
   background-color: #45CFDD ;

@@ -2,17 +2,37 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
+
+  function toConverter(){
+    window.location.href="https://larrywongkahei.github.io/PDFConverter/"
+  }
+
+  function toHayStore(){
+    window.location.href="https://haystore.herokuapp.com/"
+  }
+
+  function toJsonMaker(){
+    window.location.href="https://larrywongkahei.github.io/JsonDataMaker/"
+  }
+
+  function toMentorShip(){
+    window.location.href="https://larrywongkahei.github.io/JsonDataMaker/"
+  }
+
   return (
     <div>
       <div className='introduction'>
-          <p className='jsonMakerIntroduction'>
+          <p className='jsonMakerIntroduction' onClick={toJsonMaker}>
           JsonMaker
           </p>
-          <p className='hayStoreIntroduction'>
+          <p className='hayStoreIntroduction' onClick={toHayStore}>
           HayStore
           </p>
-          <p className='mentorShipIntroduction'>
+          <p className='mentorShipIntroduction' style={{pointerEvents:"none"}}>
           MentorShip<span> (Coming soon)</span>         
+          </p>
+          <p className='converterIntroduction' onClick={toConverter}>
+          Converter        
           </p>
 
       </div>
@@ -27,16 +47,16 @@ function App() {
         </p>
       </div>
       <div className='jsonPlanet'>
-        <div className='jsonMaker' onClick={() => window.location.href="https://larrywongkahei.github.io/JsonDataMaker/"}/>
+        <div className='jsonMaker' onClick={toJsonMaker}/>
       </div>
       <div class='hayStorePlanet'>
-      <div className='hayStore' onClick={() => window.location.href="https://haystore.herokuapp.com/"}/>
+      <div className='hayStore' onClick={toHayStore}/>
       </div>
       <div class='mentorShipPlanet'>
-        <div className='mentorShip'onClick={() => window.location.href="https://larrywongkahei.github.io/JsonDataMaker/"}/>
+        <div className='mentorShip'onClick={toMentorShip}/>
       </div>
       <div class='converterPlanet'>
-        <div className='converter'onClick={() => window.location.href="https://larrywongkahei.github.io/PDFConverter/"}/>
+        <div className='converter'onClick={toConverter}/>
       </div>
     </div>
     </div>
