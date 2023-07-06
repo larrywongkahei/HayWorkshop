@@ -7,6 +7,149 @@
   pointer-events: none;
 }
 
+.mainPlanet {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 8rem;
+  width: 8rem;
+  border-radius: 100%;
+  background-color: #9681EB;
+}
+
+.jsonMaker {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 4rem;
+  width: 4rem;
+  border-radius: 100%;
+  background-color: #45CFDD;
+  cursor: pointer;
+}
+
+.jsonPlanet {
+  height: 25rem;
+  width: 25rem;
+  animation: spin 12s infinite linear;
+}
+
+.firstLine {
+  height: 18.3rem;
+  width: 18.3rem;
+  border-style: solid;
+  border-width: .3px;
+  border-radius: 100%;
+}
+
+.secondLine {
+  height: 25.3rem;
+  width: 25.3rem;
+  border-style: solid;
+  border-width: .3px;
+  border-radius: 100%;
+}
+
+.thirdLine {
+  height: 32.3rem;
+  width: 32.3rem;
+  border-style: solid;
+  border-width: .3px;
+  border-radius: 100%;
+}
+
+.hayStore {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 3rem;
+  width: 3rem;
+  border-radius: 100%;
+  background-color: #6527BE;
+  cursor: pointer;
+
+}
+
+.hayStorePlanet {
+  height: 18rem;
+  width: 18rem;
+  animation: spin 10s infinite linear;
+}
+
+.mentorShip {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 3rem;
+  width: 3rem;
+  border-radius: 100%;
+  background-color: #A7EDE7;
+  cursor: pointer;
+}
+
+.mentorShipPlanet {
+  height: 13rem;
+  width: 13rem;
+  animation: spin 6s infinite linear;
+}
+
+.planetSystem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+
+.planetSystem div {
+  position: absolute;
+}
+
+.introduction {
+  height: 5rem;
+  border-radius: 20px;
+  width: 60%;
+  border-style: solid;
+  border-width: 1px;
+  margin-top: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.jsonMakerIntroduction {
+  background-color: #45CFDD ;
+  padding: 1rem;
+  color: white;
+  border-radius: 30px;
+}
+
+.mentorShipIntroduction {
+  background-color: #A7EDE7 ;
+  padding: 1rem;
+  color: grey;
+  border-radius: 30px;
+}
+
+
+.hayStoreIntroduction {
+  background-color: #6527BE;
+  padding: 1rem;
+  color: white;
+  border-radius: 30px;
+}
+
+@keyframes spin {
+  from {
+    transform: rotateX(0def);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
