@@ -53,7 +53,7 @@ function App() {
       <div className='hayStore' onClick={toHayStore}/>
       </div>
       <div class='mentorShipPlanet'>
-        <div className='mentorShip'onClick={toMentorShip}/>
+        <div className='mentorShip'/>
       </div>
       <div class='converterPlanet'>
         <div className='converter'onClick={toConverter}/>

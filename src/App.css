@@ -26,12 +26,16 @@
   border-radius: 100%;
   background-color: #45CFDD;
   cursor: pointer;
+  pointer-events: auto;
+
 }
 
 .jsonPlanet {
   height: 26rem;
   width: 26rem;
   animation: spin 11s infinite linear;
+  pointer-events: none;
+
 }
 
 .firstLine {
@@ -67,13 +71,30 @@
   border-radius: 100%;
   background-color: #6527BE;
   cursor: pointer;
+  pointer-events: auto;
+}
 
+.hayStorePlanet:hover {
+  animation-play-state: paused;
+}
+
+.converterPlanet:hover {
+  animation-play-state: paused;
+}
+
+.mentorShipPlanet:hover {
+  animation-play-state: paused;
+}
+
+.jsonPlanet:hover {
+  animation-play-state: paused;
 }
 
 .hayStorePlanet {
   height: 20rem;
   width: 20rem;
   animation: spin 8s infinite linear;
+  pointer-events: none;
 }
 
 .mentorShip {
@@ -85,12 +106,16 @@
   border-radius: 100%;
   background-color: #A7EDE7;
   cursor: pointer;
+  pointer-events: auto;
+
 }
 
 .mentorShipPlanet {
   height: 15.8rem;
   width: 15.8rem;
   animation: spin 6s infinite linear;
+  pointer-events: none;
+
 }
 
 .converter {
@@ -102,12 +127,16 @@
   border-radius: 100%;
   background-color: #78C1F3;
   cursor: pointer;
+  pointer-events: auto;
+
 }
 
 .converterPlanet {
   height: 11rem;
   width: 11rem;
   animation: spin 5s infinite linear;
+  pointer-events: none;
+
 }
 
 
