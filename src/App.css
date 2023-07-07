@@ -1,20 +1,25 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.mainContainer {
+  margin: 0;
+  padding: 0;
 }
 
 .mainPlanet {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  position: absolute;
   height: 8rem;
   width: 8rem;
   border-radius: 100%;
   background-color: #9681EB;
+  z-index: -1;
+}
+
+.up {
+  z-index: 10;
+  position: relative;
+  width: 8rem;
+  height: 4rem;
+  border-radius: 100px 100px 0 0;
+  background-color: #9681EB;
+  margin-bottom: 4rem;
 }
 
 .jsonMaker {
@@ -24,50 +29,93 @@
   height: 4rem;
   width: 4rem;
   border-radius: 100%;
-  background-color: #45CFDD;
+  box-shadow:
+    inset 0 0 50px #fff,
+    inset 20px 0 60px #0ff,
+    inset -20px 0 60px #0ff,
+    inset 20px 0 300px #ee82ee,
+    inset -20px 0 300px #0ff,
+    0 0 5px #fff,
+    0px 10px 20px #0ff,
+    0px -10px 20px #0ff,
+    -10px 0 60px #0ff,
+    10px 0 60px #0ff;
   cursor: pointer;
   pointer-events: auto;
-
+  animation: orbit 10s infinite linear;
 }
 
 .jsonPlanet {
-  height: 26rem;
-  width: 26rem;
-  animation: spin 11s infinite linear;
+  z-index: 2;
+  height: 32rem;
+  width: 32rem;
+  animation: suborbit 10s infinite linear;
   pointer-events: none;
-
 }
 
-.firstLine {
-  height: 13rem;
-  width: 13rem;
-  border-style: solid;
-  border-width: .3px;
-  border-radius: 100%;
-}
+
 
 .secondLine {
-  height: 18.3rem;
-  width: 18.3rem;
+  transform: rotateX(65deg);
+  z-index: 0;
+  height: 20.5rem;
+  width: 20.5rem;
   border-style: solid;
   border-width: .3px;
   border-radius: 100%;
+  color: #fff;
+  box-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 42px #0fa;
+  /* 0 0 82px #0fa; */
+  /* 0 0 92px #0fa,
+      0 0 102px #0fa,
+      0 0 151px #0fa; */
+
 }
 
 .thirdLine {
-  height: 24.3rem;
-  width: 24.3rem;
+  transform: rotateX(65deg);
+  z-index: 0;
+  height: 30rem;
+  width: 30rem;
   border-style: solid;
   border-width: .3px;
   border-radius: 100%;
+  color: #fff;
+  box-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 42px #0fa;
+  /* 0 0 82px #0fa; */
+  /* 0 0 92px #0fa,
+      0 0 102px #0fa,
+      0 0 151px #0fa; */
+
 }
 
 .fourthLine {
-  height: 31.8rem;
-  width: 31.8rem;
+  transform: rotateX(65deg);
+  z-index: 0;
+  height: 40rem;
+  width: 40rem;
   border-style: solid;
   border-width: .3px;
   border-radius: 100%;
+  color: #fff;
+  box-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 42px #0fa;
+  /* 0 0 82px #0fa; */
+  /* 0 0 92px #0fa,
+      0 0 102px #0fa,
+      0 0 151px #0fa; */
+
 }
 
 .hayStore {
@@ -77,12 +125,28 @@
   height: 3rem;
   width: 3rem;
   border-radius: 100%;
-  background-color: #6527BE;
+  /* background-color: #6527BE; */
+  box-shadow:
+    inset 0 0 50px #fff,
+    inset 20px 0 60px #9461fd,
+    inset -20px 0 60px #9461fd,
+    inset 20px 0 300px #9461fd,
+    inset -20px 0 300px #9461fd,
+    0 0 5px #fff,
+    0px 10px 20px #4003e6,
+    0px -10px 20px #4003e6,
+    -10px 0 60px #4003e6,
+    10px 0 60px #4003e6;
   cursor: pointer;
   pointer-events: auto;
+  animation: orbit 8s infinite linear;
 }
 
 .hayStorePlanet:hover {
+  animation-play-state: paused;
+}
+
+.hayStore:hover {
   animation-play-state: paused;
 }
 
@@ -90,7 +154,15 @@
   animation-play-state: paused;
 }
 
+.converter:hover {
+  animation-play-state: paused;
+}
+
 .mentorShipPlanet:hover {
+  animation-play-state: paused;
+}
+
+.mentorShip:hover {
   animation-play-state: paused;
 }
 
@@ -98,10 +170,15 @@
   animation-play-state: paused;
 }
 
+.jsonMaker:hover {
+  animation-play-state: paused;
+}
+
 .hayStorePlanet {
-  height: 20rem;
-  width: 20rem;
-  animation: spin 8s infinite linear;
+  z-index: 1;
+  height: 24rem;
+  width: 24rem;
+  animation: suborbit 8s infinite linear;
   pointer-events: none;
 }
 
@@ -112,18 +189,53 @@
   height: 3rem;
   width: 3rem;
   border-radius: 100%;
-  background-color: #A7EDE7;
+  /* background-color: #A7EDE7; */
+  box-shadow:
+    inset 0 0 50px #fff,
+    inset 20px 0 60px #FF53cd,
+    inset -20px 0 60px #FF53cd,
+    inset 20px 0 300px #FF53cd,
+    inset -20px 0 300px #FF53cd,
+    0 0 5px #fff,
+    0px 10px 20px #e10361,
+    0px -10px 20px #e10361,
+    -10px 0 60px #e10361,
+    10px 0 60px #e10361;
   cursor: pointer;
   pointer-events: auto;
-
+  /* transform: rotateX(65deg); */
+  animation: orbit 6s infinite linear;
 }
 
 .mentorShipPlanet {
-  height: 15.8rem;
-  width: 15.8rem;
-  animation: spin 6s infinite linear;
+  z-index: 6;
+  height: 18rem;
+  width: 18rem;
+  animation: suborbit 6s infinite linear;
   pointer-events: none;
+  transform-style: preserve-3d;
+  /* transform: rotateX(55deg); */
+}
 
+.firstLine {
+  z-index: 3;
+  height: 12.5rem;
+  width: 12.5rem;
+  border-style: solid;
+  border-width: .3px;
+  border-radius: 100%;
+  color: #fff;
+  box-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 42px #0fa;
+  /* 0 0 82px #0fa; */
+  /* 0 0 92px #0fa,
+      0 0 102px #0fa,
+      0 0 151px #0fa; */
+  transform-style: preserve-3d;
+  transform: rotateX(65deg);
 }
 
 .converter {
@@ -133,36 +245,80 @@
   height: 2rem;
   width: 2rem;
   border-radius: 100%;
-  background-color: #78C1F3;
+  /* background-color: #78C1F3; */
+  box-shadow:
+    inset 0 0 50px #fff,
+    inset 20px 0 60px #ffdb4e,
+    inset -20px 0 60px #ffdb4e,
+    inset 20px 0 300px #ffdb4e,
+    inset -20px 0 300px #ffdb4e,
+    0 0 5px #fff,
+    0px 10px 20px #b48505,
+    0px -10px 20px #b48505,
+    -10px 0 60px #b48505,
+    10px 0 60px #b48505;
   cursor: pointer;
   pointer-events: auto;
-
+  animation: orbit 5s infinite linear;
 }
 
 .converterPlanet {
+  z-index: 4;
   height: 11rem;
   width: 11rem;
-  animation: spin 5s infinite linear;
+  animation: suborbit 5s infinite linear;
   pointer-events: none;
-
 }
 
+@keyframes suborbit {
+  from {
+    transform: rotateX(65deg) rotateY(0deg) rotateZ(-360deg);
+  }
+
+  to {
+    transform: rotateX(65deg) rotateY(0deg) rotateZ(0deg);
+  }
+}
+
+
+
+@keyframes invert {
+  from {
+    transform: rotateX(0deg) rotateY(360deg) rotateZ(0deg);
+  }
+
+  to {
+    transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  }
+}
+
+@keyframes orbit {
+  from {
+    transform: rotateX(65deg) rotateY(0deg);
+  }
+
+  to {
+    transform: rotateX(65deg) rotateY(-360deg)
+  }
+}
 
 .planetSystem {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 80vh;
+  transform: rotateZ(10deg);
+  pointer-events: none;
 }
 
 .planetSystem div {
   position: absolute;
+  transform-style: preserve-3d;
 }
 
 .introduction {
   height: 5rem;
   border-radius: 20px;
-  width: 60%;
   border-style: solid;
   border-width: 1px;
   margin-top: 2rem;
@@ -174,71 +330,79 @@
   justify-content: space-evenly;
 }
 
-.introduction p{
+.introduction p {
   cursor: pointer;
 }
 
 .converterIntroduction {
-  background-color: #78C1F3 ;
-  padding: 1rem;
-  color: white;
-  border-radius: 30px;
+  color: #fff;
+  font-size: 30px;
+  text-shadow:
+    0 0 7px #fff,
+    0 0 10px #ffdb4e,
+    0 0 21px #ffdb4e,
+    0 0 42px #ffdb4e,
+    0 0 82px #ffdb4e,
+    0 0 92px #ffdb4e,
+    0 0 102px #ffdb4e,
+    0 0 151px #ffdb4e;
 }
 
 
 .jsonMakerIntroduction {
-  background-color: #45CFDD ;
-  padding: 1rem;
-  color: white;
-  border-radius: 30px;
+  color: #fff;
+  font-size: 30px;
+  text-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 42px #0fa,
+    0 0 82px #0fa,
+    0 0 92px #0fa,
+    0 0 102px #0fa,
+    0 0 151px #0fa;
 }
 
 .mentorShipIntroduction {
-  background-color: #A7EDE7 ;
-  padding: 1rem;
-  color: grey;
-  border-radius: 30px;
+  color: #fff;
+  font-size: 30px;
+  text-shadow:
+    0 0 7px #fff,
+    0 0 10px #FF53cd,
+    0 0 21px #FF53cd,
+    0 0 42px #FF53cd,
+    0 0 82px #FF53cd,
+    0 0 92px #FF53cd,
+    0 0 102px #FF53cd,
+    0 0 151px #FF53cd;
 }
 
 
 .hayStoreIntroduction {
-  background-color: #6527BE;
-  padding: 1rem;
-  color: white;
-  border-radius: 30px;
+  color: #fff;
+  font-size: 30px;
+  text-shadow:
+    0 0 7px #fff,
+    0 0 10px #9461fd,
+    0 0 21px #9461fd,
+    0 0 42px #9461fd,
+    0 0 82px #9461fd,
+    0 0 92px #9461fd,
+    0 0 102px #9461fd,
+    0 0 151px #9461fd;
 }
 
 @keyframes spin {
   from {
-    transform: rotateX(0def);
+    transform: rotate(0def);
   }
+
   to {
     transform: rotate(360deg);
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-.PopUp button{
+.popupButton {
   height: 2rem;
   border-radius: 10px;
   margin-bottom: 1rem;
@@ -247,16 +411,152 @@
   cursor: pointer;
 }
 
-.PopUp {
+.converterPopUp {
   border-style: solid;
+  border-width: 0px;
   height: 30rem;
   width: 25rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: #45CFDD;
+  box-shadow:
+    0 0 5px #fff,
+    0px 10px 20px #b48505,
+    0px -10px 20px #b48505,
+    -10px 0 60px #b48505,
+    10px 0 60px #b48505;
 }
-.PopUp div{
+
+.converterPopUp div {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.converterPopUp div:has(p) {
+  height: 50%;
+  border-bottom-style: dashed;
+  width: 80%;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+
+.mentorShipPopUp {
+  border-style: solid;
+  border-width: 0px;
+  height: 30rem;
+  width: 25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #45CFDD;
+  box-shadow:
+    0 0 5px #fff,
+    0px 10px 20px #e10361,
+    0px -10px 20px #e10361,
+    -10px 0 60px #e10361,
+    10px 0 60px #e10361;
+}
+
+.mentorShipPopUp div {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.mentorShipPopUp div:has(p) {
+  height: 50%;
+  border-bottom-style: dashed;
+  width: 80%;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+
+.hayStorePopUp {
+  border-style: solid;
+  border-width: 0px;
+  height: 30rem;
+  width: 25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #45CFDD;
+  box-shadow:
+    0 0 5px #fff,
+    0px 10px 20px #4003e6,
+    0px -10px 20px #4003e6,
+    -10px 0 60px #4003e6,
+    10px 0 60px #4003e6;
+}
+
+.hayStorePopUp div {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.hayStorePopUp div:has(p) {
+  height: 50%;
+  border-bottom-style: dashed;
+  width: 80%;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+
+.jsonMakerPopUp {
+  border-style: solid;
+  border-width: 0px;
+  height: 30rem;
+  width: 25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #45CFDD;
+  box-shadow:
+    0 0 5px #fff,
+    0px 10px 20px #0ff,
+    0px -10px 20px #0ff,
+    -10px 0 60px #0ff,
+    10px 0 60px #0ff;
+}
+
+.jsonMakerPopUp div {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.jsonMakerPopUp div:has(p) {
+  height: 50%;
+  border-bottom-style: dashed;
+  width: 80%;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+
+.PopUp {
+  border-style: solid;
+  border-width: 0px;
+  height: 30rem;
+  width: 25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #45CFDD;
+  box-shadow:
+    0 0 5px #fff,
+    0px 10px 20px #0ff,
+    0px -10px 20px #0ff,
+    -10px 0 60px #0ff,
+    10px 0 60px #0ff;
+}
+
+.PopUp div {
   display: flex;
   flex-direction: column;
 }
@@ -281,6 +581,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
