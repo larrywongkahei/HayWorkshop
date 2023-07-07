@@ -238,6 +238,45 @@
   color: #61dafb;
 }
 
+.PopUp button{
+  height: 2rem;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  border-width: 0px;
+  background-color: #DBDF78;
+  cursor: pointer;
+}
+
+.PopUp {
+  border-style: solid;
+  height: 30rem;
+  width: 25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #45CFDD;
+}
+.PopUp div{
+  display: flex;
+  flex-direction: column;
+}
+
+.PopUp div:has(p) {
+  height: 50%;
+  border-bottom-style: dashed;
+  width: 80%;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+
+.PopUp h3 {
+  width: 100%;
+  margin-top: 0px;
+  font-size: 24px;
+  text-align: center;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
