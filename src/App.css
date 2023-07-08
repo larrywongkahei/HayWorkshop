@@ -47,8 +47,8 @@
 
 .jsonPlanet {
   z-index: 2;
-  height: 32rem;
-  width: 32rem;
+  height: 35rem;
+  width: 35rem;
   animation: suborbit 10s infinite linear;
   pointer-events: none;
 }
@@ -58,8 +58,8 @@
 .secondLine {
   transform: rotateX(65deg);
   z-index: 0;
-  height: 20.5rem;
-  width: 20.5rem;
+  height: 22.5rem;
+  width: 22.5rem;
   border-style: solid;
   border-width: .3px;
   border-radius: 100%;
@@ -79,8 +79,8 @@
 .thirdLine {
   transform: rotateX(65deg);
   z-index: 0;
-  height: 30rem;
-  width: 30rem;
+  height: 32rem;
+  width: 32rem;
   border-style: solid;
   border-width: .3px;
   border-radius: 100%;
@@ -100,8 +100,8 @@
 .fourthLine {
   transform: rotateX(65deg);
   z-index: 0;
-  height: 40rem;
-  width: 40rem;
+  height: 43rem;
+  width: 43rem;
   border-style: solid;
   border-width: .3px;
   border-radius: 100%;
@@ -176,8 +176,8 @@
 
 .hayStorePlanet {
   z-index: 1;
-  height: 24rem;
-  width: 24rem;
+  height: 26rem;
+  width: 26rem;
   animation: suborbit 8s infinite linear;
   pointer-events: none;
 }
@@ -209,8 +209,8 @@
 
 .mentorShipPlanet {
   z-index: 6;
-  height: 18rem;
-  width: 18rem;
+  height: 19rem;
+  width: 19rem;
   animation: suborbit 6s infinite linear;
   pointer-events: none;
   transform-style: preserve-3d;
@@ -272,6 +272,7 @@
 
 @keyframes suborbit {
   from {
+    /* Z-360 */
     transform: rotateX(65deg) rotateY(0deg) rotateZ(-360deg);
   }
 
@@ -296,7 +297,7 @@
   from {
     transform: rotateX(-90deg) rotateY(0deg) rotateZ(0deg);
   }
-
+/* Y360 */
   to {
     transform: rotateX(-90deg) rotateY(360deg) rotateZ(0deg)
   }
