@@ -21,6 +21,9 @@ function App() {
 
   return (
     <div className='mainContainer'>
+      <div className='Header'>
+        <b>H<span>a</span>y's Wo<span>rk</span>Shop</b>
+      </div>
       <div className='introduction'>
         <p className='jsonMakerIntroduction' onClick={toJsonMaker}>
           JsonMaker
