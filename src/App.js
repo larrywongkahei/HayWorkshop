@@ -35,7 +35,7 @@ function App() {
           MentorShip
         </p>
         <p className='converterIntroduction' onClick={toConverter}>
-          Converter
+          PDFConverter
         </p>
 
       </div>
