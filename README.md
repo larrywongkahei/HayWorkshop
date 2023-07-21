@@ -2,6 +2,10 @@
 
 HayWorkshop is a platform for me to store all projects that I think could be used in real life.
 
+# To use
+
+Tab the title or tab on planet with color corresponding to the title to see details and links.
+
 ## Tools
 
 * #### Javascript
