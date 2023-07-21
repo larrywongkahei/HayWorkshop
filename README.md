@@ -9,7 +9,7 @@ HayWorkshop is a platform for me to store all projects that I think could be use
   
 ### Redirect
 
-<a href="https://github.com/larrywongkahei/PDFConverter">To the Github Repo</a>
+<a href="https://larrywongkahei.github.io/HayWorkshop/">To the page</a>
 
 ## Other
 
