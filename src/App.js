@@ -15,9 +15,9 @@ function App() {
     window.location.href = "https://larrywongkahei.github.io/JsonDataMaker/"
   }
 
-  // function toMentorShip() {
-  //   window.location.href = "https://larrywongkahei.github.io/JsonDataMaker/"
-  // }
+  function toDuoBuddy() {
+    window.location.href = "https://larrywongkahei.github.io/DuoBuddy/"
+  }
 
   return (
     <div className='mainContainer'>
@@ -31,8 +31,8 @@ function App() {
         <p className='hayStoreIntroduction' onClick={toHayStore}>
           HayStore
         </p>
-        <p className='mentorShipIntroduction' style={{ pointerEvents: "none" }}>
-          MentorShip
+        <p className='duoBuddyIntroduction' onClick={toDuoBuddy}>
+          DuoBuddy
         </p>
         <p className='converterIntroduction' onClick={toConverter}>
           PDFConverter
@@ -95,18 +95,18 @@ function App() {
               </div>
             }</Popup>
         </div>
-        <div class='mentorShipPlanet'>
+        <div class='duoBuddyPlanet'>
           <Popup trigger={
-            <div className='mentorShip' />
+            <div className='duoBuddy' />
           } modal nested>
             {
-              <div className='mentorShipPopUp'>
+              <div className='duoBuddyPopUp'>
                 <div>
                   <h3>
                     Introduction
                   </h3>
                   <p>
-                    MentorShip is a website that aims to bridge the gap between fresh graduates like us and experienced industry mentors.
+                    DuoBuddy is a website that aims to bridge the gap between fresh graduates like us and experienced industry mentors.
                   </p>
                   <p>
                     Coming soon.
@@ -116,8 +116,8 @@ function App() {
                   <h3>
                     Links
                   </h3>
-                  <button onClick={() => window.location.href = "https://github.com/larrywongkahei/MentorShip"} className='popupButton'>Github Repo</button>
-                  <button className='popupButton'>Website</button>
+                  <button onClick={() => window.location.href = "https://github.com/larrywongkahei/DuoBuddy"} className='popupButton'>Github Repo</button>
+                  <button onClick={toDuoBuddy} className='popupButton'>Website</button>
                 </div>
 
               </div>

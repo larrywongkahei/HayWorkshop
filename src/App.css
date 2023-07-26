@@ -212,11 +212,11 @@ text-align: center;
   animation-play-state: paused;
 }
 
-.mentorShipPlanet:hover {
+.duoBuddyPlanet:hover {
   animation-play-state: paused;
 }
 
-.mentorShip:hover {
+.duoBuddy:hover {
   animation-play-state: paused;
 }
 
@@ -236,7 +236,7 @@ text-align: center;
   pointer-events: none;
 }
 
-.mentorShip {
+.duoBuddy {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -259,7 +259,7 @@ text-align: center;
   animation: orbit 6s infinite linear;
 }
 
-.mentorShipPlanet {
+.duoBuddyPlanet {
   z-index: 6;
   height: 19rem;
   width: 19rem;
@@ -414,7 +414,7 @@ text-align: center;
     0 0 151px #0fa;
 }
 
-.mentorShipIntroduction {
+.duoBuddyIntroduction {
   color: #fff;
   font-size: 30px;
   text-shadow:
@@ -494,7 +494,7 @@ text-align: center;
 }
 
 
-.mentorShipPopUp {
+.duoBuddyPopUp {
   border-style: solid;
   border-width: 0px;
   height: 30rem;
@@ -511,13 +511,13 @@ text-align: center;
     10px 0 60px #e10361;
 }
 
-.mentorShipPopUp div {
+.duoBuddyPopUp div {
   display: flex;
   flex-direction: column;
   text-align: center;
 }
 
-.mentorShipPopUp div:has(p) {
+.duoBuddyPopUp div:has(p) {
   height: 50%;
   border-bottom-style: dashed;
   width: 80%;
