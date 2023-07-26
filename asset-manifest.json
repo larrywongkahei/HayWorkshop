@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/HayWorkshop/static/css/main.a80f4773.css",
-    "main.js": "/HayWorkshop/static/js/main.6c341e35.js",
+    "main.css": "/HayWorkshop/static/css/main.6a0febe7.css",
+    "main.js": "/HayWorkshop/static/js/main.63a87e47.js",
     "static/js/787.01c3c79e.chunk.js": "/HayWorkshop/static/js/787.01c3c79e.chunk.js",
     "index.html": "/HayWorkshop/index.html",
-    "main.a80f4773.css.map": "/HayWorkshop/static/css/main.a80f4773.css.map",
-    "main.6c341e35.js.map": "/HayWorkshop/static/js/main.6c341e35.js.map",
+    "main.6a0febe7.css.map": "/HayWorkshop/static/css/main.6a0febe7.css.map",
+    "main.63a87e47.js.map": "/HayWorkshop/static/js/main.63a87e47.js.map",
     "787.01c3c79e.chunk.js.map": "/HayWorkshop/static/js/787.01c3c79e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a80f4773.css",
-    "static/js/main.6c341e35.js"
+    "static/css/main.6a0febe7.css",
+    "static/js/main.63a87e47.js"
   ]
 }
