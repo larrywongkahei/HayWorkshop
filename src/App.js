@@ -8,7 +8,7 @@ function App() {
   }
 
   function toHayStore() {
-    window.location.href = "https://haystore.herokuapp.com/"
+    window.location.href = "https://larrywongkahei.github.io/E-Commerce/"
   }
 
   function toJsonMaker() {
@@ -28,7 +28,7 @@ function App() {
         <p className='jsonMakerIntroduction' onClick={toJsonMaker}>
           JsonMaker
         </p>
-        <p className='hayStoreIntroduction' onClick={toHayStore}>
+        <p className='hayStoreIntroduction' onClick={() => window.location.href = "https://github.com/larrywongkahei/E-Commerce"}>
           HayStore
         </p>
         <p className='duoBuddyIntroduction' onClick={toDuoBuddy}>
@@ -37,7 +37,6 @@ function App() {
         <p className='converterIntroduction' onClick={toConverter}>
           PDFConverter
         </p>
-
       </div>
 
       <div className='planetSystem'>
