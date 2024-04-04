@@ -1,5 +1,7 @@
 import './App.css';
 import Popup from 'reactjs-popup';
+import { FaArrowDown } from "react-icons/fa";
+
 
 function App() {
 
@@ -21,135 +23,143 @@ function App() {
 
   return (
     <div className='mainContainer'>
-      <div className='Header'>
-        <b>H<span>a</span>y's Wo<span>rk</span>Shop</b>
+      <div className='FirstPart'>
+        <div className='MainHeader'>
+          <p>OPEN</p>
+        </div>
+        <div className='Header'>
+          <b>H<span>a</span>y's Wo<span>rk</span>Shop</b>
+        </div>
+        <FaArrowDown className='arrow' size={70} onClick={()=>{document.getElementById('SecondPart').scrollIntoView({behavior:'smooth'})}}/>
       </div>
-      <div className='introduction'>
-        <p className='jsonMakerIntroduction' onClick={toJsonMaker}>
-          JsonMaker
-        </p>
-        <p className='hayStoreIntroduction' onClick={() => window.location.href = "https://github.com/larrywongkahei/E-Commerce"}>
-          HayStore
-        </p>
-        <p className='duoBuddyIntroduction' onClick={toDuoBuddy}>
-          DuoBuddy
-        </p>
-        <p className='converterIntroduction' onClick={toConverter}>
-          PDFConverter
-        </p>
-      </div>
-
-      <div className='planetSystem'>
-        <div className='firstLine' />
-        <div className='secondLine' />
-        <div className='thirdLine' />
-        <div className='fourthLine' />
-        <div className='up' />
-        <div className='mainPlanet' />
-        <div className='jsonPlanet'>
-          <Popup trigger={
-            <div className='jsonMaker' />} modal nested>
-            {
-              <div className='jsonMakerPopUp'>
-                <div>
-                  <h3>
-                    Introduction
-                  </h3>
-                  <p>
-                    JsonDataMaker is a website that you could pick any field you want and convert your data to json format.The website provided two simple API endpoint for you to fetch for your project.
-                  </p>
-                </div>
-                <div>
-                  <h3>
-                    Links
-                  </h3>
-                  <button onClick={() => window.location.href = "https://github.com/larrywongkahei/JsonDataMaker"} className='popupButton'>Github Repo</button>
-                  <button onClick={toJsonMaker} className='popupButton'>Website</button>
-                </div>
-
-              </div>
-            }</Popup>
+      <div className='SecondPart' id='SecondPart'>
+        <div className='introduction'>
+          <p className='jsonMakerIntroduction' onClick={toJsonMaker}>
+            JsonMaker
+          </p>
+          <p className='hayStoreIntroduction' onClick={() => window.location.href = "https://github.com/larrywongkahei/E-Commerce"}>
+            HayStore
+          </p>
+          <p className='duoBuddyIntroduction' onClick={toDuoBuddy}>
+            DuoBuddy
+          </p>
+          <p className='converterIntroduction' onClick={toConverter}>
+            PDFConverter
+          </p>
         </div>
-        <div class='hayStorePlanet'>
-          <Popup trigger={
-            <div className='hayStore' />
-          } modal nested>
-            {
-              <div className='hayStorePopUp'>
-                <div>
-                  <h3>
-                    Introduction
-                  </h3>
-                  <p>
-                    Haystore is a fake E-commerce store built with C# and ASP.Net, this is a project to showcase my skills with C# and .Net, most layout are from Amazon because the point is to make a fake amazon website.                  </p>
-                </div>
-                <div>
-                  <h3>
-                    Links
-                  </h3>
-                  <button onClick={() => window.location.href = "https://github.com/larrywongkahei/E-Commerce"} className='popupButton'>Github Repo</button>
-                  <button onClick={toHayStore} className='popupButton'>Website</button>
-                </div>
 
-              </div>
-            }</Popup>
-        </div>
-        <div class='duoBuddyPlanet'>
-          <Popup trigger={
-            <div className='duoBuddy' />
-          } modal nested>
-            {
-              <div className='duoBuddyPopUp'>
-                <div>
-                  <h3>
-                    Introduction
-                  </h3>
-                  <p>
-                    DuoBuddy is a website that aims to bridge the gap between fresh graduates like us and experienced industry mentors.
-                  </p>
-                  <p>
-                    Coming soon.
-                  </p>
-                </div>
-                <div>
-                  <h3>
-                    Links
-                  </h3>
-                  <button onClick={() => window.location.href = "https://github.com/larrywongkahei/DuoBuddy"} className='popupButton'>Github Repo</button>
-                  <button onClick={toDuoBuddy} className='popupButton'>Website</button>
-                </div>
+        <div className='planetSystem'>
+          <div className='firstLine' />
+          <div className='secondLine' />
+          <div className='thirdLine' />
+          <div className='fourthLine' />
+          <div className='up' />
+          <div className='mainPlanet' />
+          <div className='jsonPlanet'>
+            <Popup trigger={
+              <div className='jsonMaker' />} modal nested>
+              {
+                <div className='jsonMakerPopUp'>
+                  <div>
+                    <h3>
+                      Introduction
+                    </h3>
+                    <p>
+                      JsonDataMaker is a website that you could pick any field you want and convert your data to json format.The website provided two simple API endpoint for you to fetch for your project.
+                    </p>
+                  </div>
+                  <div>
+                    <h3>
+                      Links
+                    </h3>
+                    <button onClick={() => window.location.href = "https://github.com/larrywongkahei/JsonDataMaker"} className='popupButton'>Github Repo</button>
+                    <button onClick={toJsonMaker} className='popupButton'>Website</button>
+                  </div>
 
-              </div>
-            }</Popup>
-        </div>
-        <div class='converterPlanet'>
-          <Popup trigger={
-            <div className='converter' />
-          } modal nested>
-            {
-              <div className='converterPopUp'>
-                <div>
-                  <h3>
-                    Introduction
-                  </h3>
-                  <p>
-                    PDF Converter is an application that let you to convert any format of file into PDF (Only Image format works now).
-                  </p>
-                  <p>
-                    Please Note, Only image format works now.
-                  </p>
                 </div>
-                <div>
-                  <h3>
-                    Links
-                  </h3>
-                  <button onClick={() => window.location.href = "https://github.com/larrywongkahei/PDFConverter"} className='popupButton'>Github Repo</button>
-                  <button onClick={toConverter} className='popupButton'>Website</button>
+              }</Popup>
+          </div>
+          <div class='hayStorePlanet'>
+            <Popup trigger={
+              <div className='hayStore' />
+            } modal nested>
+              {
+                <div className='hayStorePopUp'>
+                  <div>
+                    <h3>
+                      Introduction
+                    </h3>
+                    <p>
+                      Haystore is a fake E-commerce store built with C# and ASP.Net, this is a project to showcase my skills with C# and .Net, most layout are from Amazon because the point is to make a fake amazon website.                  </p>
+                  </div>
+                  <div>
+                    <h3>
+                      Links
+                    </h3>
+                    <button onClick={() => window.location.href = "https://github.com/larrywongkahei/E-Commerce"} className='popupButton'>Github Repo</button>
+                    <button onClick={toHayStore} className='popupButton'>Website</button>
+                  </div>
+
                 </div>
+              }</Popup>
+          </div>
+          <div class='duoBuddyPlanet'>
+            <Popup trigger={
+              <div className='duoBuddy' />
+            } modal nested>
+              {
+                <div className='duoBuddyPopUp'>
+                  <div>
+                    <h3>
+                      Introduction
+                    </h3>
+                    <p>
+                      DuoBuddy is a website that aims to bridge the gap between fresh graduates like us and experienced industry mentors.
+                    </p>
+                    <p>
+                      Coming soon.
+                    </p>
+                  </div>
+                  <div>
+                    <h3>
+                      Links
+                    </h3>
+                    <button onClick={() => window.location.href = "https://github.com/larrywongkahei/DuoBuddy"} className='popupButton'>Github Repo</button>
+                    <button onClick={toDuoBuddy} className='popupButton'>Website</button>
+                  </div>
 
-              </div>
-            }</Popup>
+                </div>
+              }</Popup>
+          </div>
+          <div class='converterPlanet'>
+            <Popup trigger={
+              <div className='converter' />
+            } modal nested>
+              {
+                <div className='converterPopUp'>
+                  <div>
+                    <h3>
+                      Introduction
+                    </h3>
+                    <p>
+                      PDF Converter is an application that let you to convert any format of file into PDF (Only Image format works now).
+                    </p>
+                    <p>
+                      Please Note, Only image format works now.
+                    </p>
+                  </div>
+                  <div>
+                    <h3>
+                      Links
+                    </h3>
+                    <button onClick={() => window.location.href = "https://github.com/larrywongkahei/PDFConverter"} className='popupButton'>Github Repo</button>
+                    <button onClick={toConverter} className='popupButton'>Website</button>
+                  </div>
 
+                </div>
+              }</Popup>
+
+          </div>
         </div>
       </div>
     </div>
