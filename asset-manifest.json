@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/HayWorkshop/static/css/main.fa67b70e.css",
+    "main.js": "/HayWorkshop/static/js/main.f56ff6f5.js",
+    "index.html": "/HayWorkshop/index.html",
+    "main.fa67b70e.css.map": "/HayWorkshop/static/css/main.fa67b70e.css.map",
+    "main.f56ff6f5.js.map": "/HayWorkshop/static/js/main.f56ff6f5.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fa67b70e.css",
+    "static/js/main.f56ff6f5.js"
+  ]
+}
