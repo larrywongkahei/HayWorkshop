@@ -1,5 +1,7 @@
 import './App.css';
 import Popup from 'reactjs-popup';
+import { FaArrowDown } from "react-icons/fa";
+
 
 function App() {
 
@@ -8,7 +10,7 @@ function App() {
   }
 
   function toHayStore() {
-    window.location.href = "https://haystore.herokuapp.com/"
+    window.location.href = "https://larrywongkahei.github.io/E-Commerce/"
   }
 
   function toJsonMaker() {
@@ -21,52 +23,58 @@ function App() {
 
   return (
     <div className='mainContainer'>
-      <div className='Header'>
-        <b>H<span>a</span>y's Wo<span>rk</span>Shop</b>
+      <div className='FirstPart'>
+        <div className='MainHeader'>
+          <p>OPEN</p>
+        </div>
+        <div className='Header'>
+          <b>H<span>a</span>y's Wo<span>rk</span>Shop</b>
+        </div>
+        <FaArrowDown className='arrow' size={70} onClick={()=>{document.getElementById('SecondPart').scrollIntoView({behavior:'smooth'})}}/>
       </div>
-      <div className='introduction'>
-        <p className='jsonMakerIntroduction' onClick={toJsonMaker}>
-          JsonMaker
-        </p>
-        <p className='hayStoreIntroduction' onClick={toHayStore}>
-          HayStore
-        </p>
-        <p className='duoBuddyIntroduction' onClick={toDuoBuddy}>
-          DuoBuddy
-        </p>
-        <p className='converterIntroduction' onClick={toConverter}>
-          PDFConverter
-        </p>
+      <div className='SecondPart' id='SecondPart'>
+        <div className='introduction'>
+          <p className='jsonMakerIntroduction' onClick={toJsonMaker}>
+            JsonMaker
+          </p>
+          <p className='hayStoreIntroduction' onClick={() => window.location.href = "https://github.com/larrywongkahei/E-Commerce"}>
+            HayStore
+          </p>
+          <p className='duoBuddyIntroduction' onClick={toDuoBuddy}>
+            DuoBuddy
+          </p>
+          <p className='converterIntroduction' onClick={toConverter}>
+            PDFConverter
+          </p>
+        </div>
 
-      </div>
-
-      <div className='planetSystem'>
-        <div className='firstLine' />
-        <div className='secondLine' />
-        <div className='thirdLine' />
-        <div className='fourthLine' />
-        <div className='up' />
-        <div className='mainPlanet' />
-        <div className='jsonPlanet'>
-          <Popup trigger={
-            <div className='jsonMaker' />} modal nested>
-            {
-              <div className='jsonMakerPopUp'>
-                <div>
-                  <h3>
-                    Introduction
-                  </h3>
-                  <p>
-                    JsonDataMaker is a website that you could pick any field you want and convert your data to json format.The website provided two simple API endpoint for you to fetch for your project.
-                  </p>
-                </div>
-                <div>
-                  <h3>
-                    Links
-                  </h3>
-                  <button onClick={() => window.location.href = "https://github.com/larrywongkahei/JsonDataMaker"} className='popupButton'>Github Repo</button>
-                  <button onClick={toJsonMaker} className='popupButton'>Website</button>
-                </div>
+        <div className='planetSystem'>
+          <div className='firstLine' />
+          <div className='secondLine' />
+          <div className='thirdLine' />
+          <div className='fourthLine' />
+          <div className='up' />
+          <div className='mainPlanet' />
+          <div className='jsonPlanet'>
+            <Popup trigger={
+              <div className='jsonMaker' />} modal nested>
+              {
+                <div className='jsonMakerPopUp'>
+                  <div>
+                    <h3>
+                      Introduction
+                    </h3>
+                    <p>
+                      JsonDataMaker is a website that you could pick any field you want and convert your data to json format.The website provided two simple API endpoint for you to fetch for your project.
+                    </p>
+                  </div>
+                  <div>
+                    <h3>
+                      Links
+                    </h3>
+                    <button onClick={() => window.location.href = "https://github.com/larrywongkahei/JsonDataMaker"} className='popupButton'>Github Repo</button>
+                    <button onClick={toJsonMaker} className='popupButton'>Website</button>
+                  </div>
 
               </div>
             }</Popup>
@@ -117,40 +125,41 @@ function App() {
                     Links
                   </h3>
                   <button onClick={() => window.location.href = "https://github.com/larrywongkahei/DuoBuddy"} className='popupButton'>Github Repo</button>
-                  {/* <button onClick={toDuoBuddy} className='popupButton'>Website</button> */}
+                  <button onClick={toDuoBuddy} className='popupButton'>Website</button>
                 </div>
 
-              </div>
-            }</Popup>
-        </div>
-        <div class='converterPlanet'>
-          <Popup trigger={
-            <div className='converter' />
-          } modal nested>
-            {
-              <div className='converterPopUp'>
-                <div>
-                  <h3>
-                    Introduction
-                  </h3>
-                  <p>
-                    PDF Converter is an application that let you to convert any format of file into PDF (Only Image format works now).
-                  </p>
-                  <p>
-                    Please Note, Only image format works now.
-                  </p>
                 </div>
-                <div>
-                  <h3>
-                    Links
-                  </h3>
-                  <button onClick={() => window.location.href = "https://github.com/larrywongkahei/PDFConverter"} className='popupButton'>Github Repo</button>
-                  <button onClick={toConverter} className='popupButton'>Website</button>
+              }</Popup>
+          </div>
+          <div class='converterPlanet'>
+            <Popup trigger={
+              <div className='converter' />
+            } modal nested>
+              {
+                <div className='converterPopUp'>
+                  <div>
+                    <h3>
+                      Introduction
+                    </h3>
+                    <p>
+                      PDF Converter is an application that let you to convert any format of file into PDF (Only Image format works now).
+                    </p>
+                    <p>
+                      Please Note, Only image format works now.
+                    </p>
+                  </div>
+                  <div>
+                    <h3>
+                      Links
+                    </h3>
+                    <button onClick={() => window.location.href = "https://github.com/larrywongkahei/PDFConverter"} className='popupButton'>Github Repo</button>
+                    <button onClick={toConverter} className='popupButton'>Website</button>
+                  </div>
+
                 </div>
+              }</Popup>
 
-              </div>
-            }</Popup>
-
+          </div>
         </div>
       </div>
     </div>
