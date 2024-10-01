@@ -145,7 +145,7 @@ function App() {
                       PDF Converter is an application that let you to convert any format of file into PDF (Only Image format works now).
                     </p>
                     <p>
-                      Please Note, Only image format works now.
+                      Please Note, Server is not hosted.
                     </p>
                   </div>
                   <div>
@@ -153,7 +153,7 @@ function App() {
                       Links
                     </h3>
                     <button onClick={() => window.location.href = "https://github.com/larrywongkahei/PDFConverter"} className='popupButton'>Github Repo</button>
-                    <button onClick={toConverter} className='popupButton'>Website</button>
+                    {/* <button onClick={toConverter} className='popupButton'>Website</button> */}
                   </div>
 
                 </div>
