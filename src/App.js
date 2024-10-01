@@ -89,7 +89,7 @@ function App() {
                     Links
                   </h3>
                   <button onClick={() => window.location.href = "https://github.com/larrywongkahei/E-Commerce"} className='popupButton'>Github Repo</button>
-                  <button onClick={toHayStore} className='popupButton'>Website</button>
+                  {/* <button onClick={toHayStore} className='popupButton'>Website</button> */}
                 </div>
 
               </div>
@@ -117,7 +117,7 @@ function App() {
                     Links
                   </h3>
                   <button onClick={() => window.location.href = "https://github.com/larrywongkahei/DuoBuddy"} className='popupButton'>Github Repo</button>
-                  <button onClick={toDuoBuddy} className='popupButton'>Website</button>
+                  {/* <button onClick={toDuoBuddy} className='popupButton'>Website</button> */}
                 </div>
 
               </div>
